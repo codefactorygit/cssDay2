@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 1600px;
+    }
+
+    #divstatic {
+      position: static;
+      border: 3px solid green;
+    }
+
+    #divabsolute {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 3px solid red;
+    }
+
+    #divrelative {
+      /* position: relative; */
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      border: 3px solid blue;
+    }
+
+    #divfixed {
+      position: fixed;
+      bottom: 0px;
+      z-index: 1;
+      border: 3px solid violet;
+    }
+
+    #canvas {
+      width: 500px;
+      height: 300px;
+      /* border: solid 2px black; */
+      margin: auto;
+      position: relative;
+      background-color: blue;
+    }
+    #canvas img{
+      width: 100%;
+      height: 100%;
+    }
+
+    .box {
+      margin: 0;
+      padding: 0;
+    }
+
+    .item1 {      
+      color: white;
+      position: absolute;
+      /* top: 50%;
+      left: 50%; */
+      top: 5px;
+      left: 5px;
+      /* transform: translate(-50%, -50%); */
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    
+  </style>
+</head>
+
+<body>
+
+  <h2>position: static;</h2>
+  <p>An element with position: static; will follow the normal flow of the page:</p>
+
+  <div id="divstatic">
+    This div element has <code>position: static;</code> and will follow the normal flow of the page
+  </div>
+
+  <h2>position: absolute;</h2>
+  <p>An element with position: absolute; is free of normal flow restrictions</p>
+  <div id="divabsolute">
+    This div element has <code>position: absolute;</code> and is positioned absolute to the viewport; therefore, normal
+    flow rules do not apply
+  </div>
+  <h2>position: relative;</h2>
+  <p>Non-relative (aka static) element would appear just below this paragraph:</p>
+  <div id="divrelative">
+    This div element has <code>position: relative;</code> to the position where it would be in a normal flow; it can of
+    course go left, right, up and down to this position.
+  </div>
+  <h2>position: fixed;</h2>
+  <p>Fixed element is glued to edges of the viewport, regardless to how you change the viewport or scroll. </p>
+  <div id="divfixed">
+    This div element has <code>position: fixed;</code>.
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div id="canvas">
+    <img src="https://cdn.pixabay.com/photo/2021/08/26/14/31/flower-6576240_960_720.jpg" alt="redFlower">
+    <p class="box item1">The flower power</p>
+  </div>
+</body>
+
+</html>
